@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4A80497-C533-4D26-9F5C-E170DCC67A55}</ProjectGuid>
+    <RootNamespace>Manager</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>odbc32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>odbc32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="config_infor.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddUserDlg.h" />
+    <ClInclude Include="AdminDlg.h" />
+    <ClInclude Include="attend_table.h" />
+    <ClInclude Include="AtWorkDlg.h" />
+    <ClInclude Include="ChangePasswdDlg.h" />
+    <ClInclude Include="CourseDlg.h" />
+    <ClInclude Include="course_table.h" />
+    <ClInclude Include="DeletePersonDlg.h" />
+    <ClInclude Include="EditRecordDlg.h" />
+    <ClInclude Include="EditSignDlg.h" />
+    <ClInclude Include="excel9.h" />
+    <ClInclude Include="MainFramDlg.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="ManagerDlg.h" />
+    <ClInclude Include="person.h" />
+    <ClInclude Include="ReadInforDlg.h" />
+    <ClInclude Include="ReceiveBoxDlg.h" />
+    <ClInclude Include="receive_infor.h" />
+    <ClInclude Include="RecordDlg.h" />
+    <ClInclude Include="register_infor.h" />
+    <ClInclude Include="RemindReceiveDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SendBoxDlg.h" />
+    <ClInclude Include="SendInforDlg.h" />
+    <ClInclude Include="send_infor.h" />
+    <ClInclude Include="SetWorkDlg.h" />
+    <ClInclude Include="SignDlg.h" />
+    <ClInclude Include="SkinPlusPlus.h" />
+    <ClInclude Include="start_work.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TotalWorkDlg.h" />
+    <ClInclude Include="UserCentreDlg.h" />
+    <ClInclude Include="WorkSheetDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddUserDlg.cpp" />
+    <ClCompile Include="AdminDlg.cpp" />
+    <ClCompile Include="attend_table.cpp" />
+    <ClCompile Include="AtWorkDlg.cpp" />
+    <ClCompile Include="ChangePasswdDlg.cpp" />
+    <ClCompile Include="CourseDlg.cpp" />
+    <ClCompile Include="course_table.cpp" />
+    <ClCompile Include="DeletePersonDlg.cpp" />
+    <ClCompile Include="EditRecordDlg.cpp" />
+    <ClCompile Include="EditSignDlg.cpp" />
+    <ClCompile Include="excel9.cpp" />
+    <ClCompile Include="MainFramDlg.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="ManagerDlg.cpp" />
+    <ClCompile Include="person.cpp" />
+    <ClCompile Include="ReadInforDlg.cpp" />
+    <ClCompile Include="ReceiveBoxDlg.cpp" />
+    <ClCompile Include="receive_infor.cpp" />
+    <ClCompile Include="RecordDlg.cpp" />
+    <ClCompile Include="register_infor.cpp" />
+    <ClCompile Include="RemindReceiveDlg.cpp" />
+    <ClCompile Include="SendBoxDlg.cpp" />
+    <ClCompile Include="SendInforDlg.cpp" />
+    <ClCompile Include="send_infor.cpp" />
+    <ClCompile Include="SetWorkDlg.cpp" />
+    <ClCompile Include="SignDlg.cpp" />
+    <ClCompile Include="start_work.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TotalWorkDlg.cpp" />
+    <ClCompile Include="UserCentreDlg.cpp" />
+    <ClCompile Include="WorkSheetDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Manager.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\代码关系图20160218.dgml" />
+    <None Include="..\对话窗口调用关系图20160218.dgml" />
+    <None Include="res\Manager.rc2" />
+    <None Include="SkinPlusPlusDLL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Manager.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Manager.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
